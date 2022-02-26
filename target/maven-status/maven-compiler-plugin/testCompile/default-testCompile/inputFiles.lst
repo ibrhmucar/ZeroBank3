@@ -1,0 +1,16 @@
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/runnes/CukesRunner.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/stepdefnitions/AddNewPayeeStepDefs.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/utilities/ConfigurationReader.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/stepdefnitions/FindTransactionsStepDefs.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/pages/findTransactionPage.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/pages/AccountSummaryPage.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/pages/BasePage.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/pages/DashBoardPage.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/stepdefnitions/PurchaseForeignCurrencyStepDef.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/stepdefnitions/AccountActivityStepDef.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/stepdefnitions/Hooks.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/pages/NewPayeePage.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/utilities/BrowserUtils.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/pages/LoginPage.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/utilities/Driver.java
+/Users/ibrahimucar/Desktop/ZeroBank/src/test/java/com/zerobank/pages/PurchaseForeignCurrencyPage.java

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>13 Feb 2022, 17:04</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_drop_down_default_option_should_be_Savings()</td>
+              <td>1</td>
+              <td class="duration" data-value="492000">0.000</td>
+              <td class="duration" data-value="492000">0.000</td>
+              <td class="duration" data-value="492000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_drop_down_should_have_Brokerage_selected()</td>
+              <td>1</td>
+              <td class="duration" data-value="1146848000">1.146</td>
+              <td class="duration" data-value="1146848000">1.146</td>
+              <td class="duration" data-value="1146848000">1.146</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_drop_down_should_have_Checking_selected()</td>
+              <td>1</td>
+              <td class="duration" data-value="78884000">0.078</td>
+              <td class="duration" data-value="78884000">0.078</td>
+              <td class="duration" data-value="78884000">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_drop_down_should_have_Credit_Card_selected()</td>
+              <td>1</td>
+              <td class="duration" data-value="88482000">0.088</td>
+              <td class="duration" data-value="88482000">0.088</td>
+              <td class="duration" data-value="88482000">0.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_drop_down_should_have_Loan_selected()</td>
+              <td>1</td>
+              <td class="duration" data-value="85882000">0.085</td>
+              <td class="duration" data-value="85882000">0.085</td>
+              <td class="duration" data-value="85882000">0.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_drop_down_should_have_Savings_selected()</td>
+              <td>1</td>
+              <td class="duration" data-value="85446000">0.085</td>
+              <td class="duration" data-value="85446000">0.085</td>
+              <td class="duration" data-value="85446000">0.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_drop_down_should_have_the_following_options(java.util.List)</td>
+              <td>1</td>
+              <td class="duration" data-value="2945000">0.002</td>
+              <td class="duration" data-value="2945000">0.002</td>
+              <td class="duration" data-value="2945000">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_summary_page_should_be_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="4469083000">4.469</td>
+              <td class="duration" data-value="4469083000">4.469</td>
+              <td class="duration" data-value="4469083000">4.469</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_summary_page_should_be_displayed(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2300023000">2.300</td>
+              <td class="duration" data-value="2300023000">2.303</td>
+              <td class="duration" data-value="4600046000">4.600</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_summary_page_should_be_displayed2()</td>
+              <td>1</td>
+              <td class="duration" data-value="2008758000">2.008</td>
+              <td class="duration" data-value="2008758000">2.008</td>
+              <td class="duration" data-value="2008758000">2.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.account_summary_page_should_have_to_following_account_types(java.util.List)</td>
+              <td>1</td>
+              <td class="duration" data-value="90511000">0.090</td>
+              <td class="duration" data-value="90511000">0.090</td>
+              <td class="duration" data-value="90511000">0.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.amount_field_should_not_accept_alphabetical_or_special_characters_Date_field_should_not_accept_alphabetical_characters()</td>
+              <td>1</td>
+              <td class="duration" data-value="865000">0.000</td>
+              <td class="duration" data-value="865000">0.000</td>
+              <td class="duration" data-value="865000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.credit_Accounts_table_must_have_columns(java.util.List)</td>
+              <td>1</td>
+              <td class="duration" data-value="35774000">0.035</td>
+              <td class="duration" data-value="35774000">0.035</td>
+              <td class="duration" data-value="35774000">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.error_message_should_be_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="39431000">0.039</td>
+              <td class="duration" data-value="39431000">0.039</td>
+              <td class="duration" data-value="39431000">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.the_Account_Activity_page_should_be_displayed()</td>
+              <td>5</td>
+              <td class="duration" data-value="1066930000">1.066</td>
+              <td class="duration" data-value="1066930000">1.071</td>
+              <td class="duration" data-value="5334650000">5.334</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.the_user_clicks_on_Brokerage_link_on_the_Account_Summary_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2422015000">2.422</td>
+              <td class="duration" data-value="2422015000">2.422</td>
+              <td class="duration" data-value="2422015000">2.422</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.the_user_clicks_on_Checking_link_on_the_Account_Summary_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1144736000">1.144</td>
+              <td class="duration" data-value="1144736000">1.144</td>
+              <td class="duration" data-value="1144736000">1.144</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.the_user_clicks_on_Credit_card_link_on_the_Account_Summary_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1102255000">1.102</td>
+              <td class="duration" data-value="1102255000">1.102</td>
+              <td class="duration" data-value="1102255000">1.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.the_user_clicks_on_Loan_link_on_the_Account_Summary_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1093850000">1.093</td>
+              <td class="duration" data-value="1093850000">1.093</td>
+              <td class="duration" data-value="1093850000">1.093</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.the_user_clicks_on_Savings_link_on_the_Account_Summary_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="4172143000">4.172</td>
+              <td class="duration" data-value="4172143000">4.172</td>
+              <td class="duration" data-value="4172143000">4.172</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.the_user_is_logged_in()</td>
+              <td>9</td>
+              <td class="duration" data-value="7623930111">7.623</td>
+              <td class="duration" data-value="7623930111">7.780</td>
+              <td class="duration" data-value="68615371000">1:8.615</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.transactions_table_should_have_column_names(java.util.List)</td>
+              <td>1</td>
+              <td class="duration" data-value="644000">0.000</td>
+              <td class="duration" data-value="644000">0.000</td>
+              <td class="duration" data-value="644000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.user_completes_a_successful_Pay_operation_should_be_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1049000">0.001</td>
+              <td class="duration" data-value="1049000">0.001</td>
+              <td class="duration" data-value="1049000">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.user_tries_to_make_a_payment_without_entering_the_amount_or_date_should_be_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="980000">0.000</td>
+              <td class="duration" data-value="980000">0.000</td>
+              <td class="duration" data-value="980000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AccountActivityStepDef.users_with_wrong_username_or_wrong_password_should_not_be_able_to_login()</td>
+              <td>1</td>
+              <td class="duration" data-value="4055281000">4.055</td>
+              <td class="duration" data-value="4055281000">4.055</td>
+              <td class="duration" data-value="4055281000">4.055</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AddNewPayeeStepDefs.add_New_Payee_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="11198234000">11.198</td>
+              <td class="duration" data-value="11198234000">11.198</td>
+              <td class="duration" data-value="11198234000">11.198</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AddNewPayeeStepDefs.creates_new_payee_using_following_information(java.util.Map&lt;java.lang.String, java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="4094395000">4.094</td>
+              <td class="duration" data-value="4094395000">4.094</td>
+              <td class="duration" data-value="4094395000">4.094</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.AddNewPayeeStepDefs.message_should_be_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="36836000">0.036</td>
+              <td class="duration" data-value="36836000">0.036</td>
+              <td class="duration" data-value="36836000">0.036</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.clicks_search()</td>
+              <td>7</td>
+              <td class="duration" data-value="2113023000">2.113</td>
+              <td class="duration" data-value="2113023000">2.169</td>
+              <td class="duration" data-value="14791161000">14.791</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.results_table_should_not_show_descriptions_containing(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4196732000">4.196</td>
+              <td class="duration" data-value="4196732000">4.196</td>
+              <td class="duration" data-value="4196732000">4.196</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.results_table_should_only_show_descriptions_containing(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="18509460500">18.509</td>
+              <td class="duration" data-value="18509460500">48.211</td>
+              <td class="duration" data-value="74037842000">1:14.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6748778000">6.748</td>
+              <td class="duration" data-value="6748778000">6.748</td>
+              <td class="duration" data-value="6748778000">6.748</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.results_table_should_only_show_transactions_dates_betweens_to(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6691081000">6.691</td>
+              <td class="duration" data-value="6691081000">6.691</td>
+              <td class="duration" data-value="6691081000">6.691</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.results_table_should_show_at_least_one_result_under_Deposit()</td>
+              <td>2</td>
+              <td class="duration" data-value="4101276000">4.101</td>
+              <td class="duration" data-value="4101276000">4.115</td>
+              <td class="duration" data-value="8202552000">8.202</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.results_table_should_show_at_least_one_result_under_Withdrawal()</td>
+              <td>2</td>
+              <td class="duration" data-value="26954000">0.026</td>
+              <td class="duration" data-value="26954000">0.033</td>
+              <td class="duration" data-value="53908000">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.results_table_should_show_no_result_under_Deposit()</td>
+              <td>1</td>
+              <td class="duration" data-value="65889000">0.065</td>
+              <td class="duration" data-value="65889000">0.065</td>
+              <td class="duration" data-value="65889000">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.results_table_should_show_no_result_under_Withdrawal()</td>
+              <td>1</td>
+              <td class="duration" data-value="2242552000">2.242</td>
+              <td class="duration" data-value="2242552000">2.242</td>
+              <td class="duration" data-value="2242552000">2.242</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.the_results_should_be_sorted_by_most_recent_date()</td>
+              <td>1</td>
+              <td class="duration" data-value="10295256000">10.295</td>
+              <td class="duration" data-value="10295256000">10.295</td>
+              <td class="duration" data-value="10295256000">10.295</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.the_results_table_should_only_not_contain_transactions_dated(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6169192000">6.169</td>
+              <td class="duration" data-value="6169192000">6.169</td>
+              <td class="duration" data-value="6169192000">6.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.the_user_accesses_the_Find_Transactions_tab()</td>
+              <td>4</td>
+              <td class="duration" data-value="11258633250">11.258</td>
+              <td class="duration" data-value="11258633250">11.846</td>
+              <td class="duration" data-value="45034533000">45.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5275413000">5.275</td>
+              <td class="duration" data-value="5275413000">5.275</td>
+              <td class="duration" data-value="5275413000">5.275</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.the_user_enters_date_range_froms_to(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3197320000">3.197</td>
+              <td class="duration" data-value="3197320000">3.197</td>
+              <td class="duration" data-value="3197320000">3.197</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.the_user_enters_description(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2087069000">2.087</td>
+              <td class="duration" data-value="2087069000">2.110</td>
+              <td class="duration" data-value="8348276000">8.348</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.FindTransactionsStepDefs.user_selects_type(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4137943500">4.137</td>
+              <td class="duration" data-value="4137943500">4.165</td>
+              <td class="duration" data-value="8275887000">8.275</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.Hooks.setUp()</td>
+              <td>17</td>
+              <td class="duration" data-value="1388482058">1.388</td>
+              <td class="duration" data-value="1388482058">2.242</td>
+              <td class="duration" data-value="23604195000">23.604</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>17</td>
+              <td class="duration" data-value="2109846176">2.109</td>
+              <td class="duration" data-value="2109846176">2.259</td>
+              <td class="duration" data-value="35867385000">35.867</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.error_message_should_be_displayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="2489000">0.002</td>
+              <td class="duration" data-value="2489000">0.002</td>
+              <td class="duration" data-value="4978000">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.following_currencies_should_be_available(java.util.List&lt;java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="322618000">0.322</td>
+              <td class="duration" data-value="322618000">0.322</td>
+              <td class="duration" data-value="322618000">0.322</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.the_user_accesses_the_Purchase_foreign_currency_cash_tab()</td>
+              <td>3</td>
+              <td class="duration" data-value="11018216000">11.018</td>
+              <td class="duration" data-value="11018216000">11.096</td>
+              <td class="duration" data-value="33054648000">33.054</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.user_tries_to_calculate_cost_without_entering_a_value()</td>
+              <td>1</td>
+              <td class="duration" data-value="2185134000">2.185</td>
+              <td class="duration" data-value="2185134000">2.185</td>
+              <td class="duration" data-value="2185134000">2.185</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.user_tries_to_calculate_cost_without_selecting_a_currency()</td>
+              <td>1</td>
+              <td class="duration" data-value="2212312000">2.212</td>
+              <td class="duration" data-value="2212312000">2.212</td>
+              <td class="duration" data-value="2212312000">2.212</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>51</td>
+            <td>117</td>
+            <td class="duration">3.563</td>
+            <td class="duration">1:14.037</td>
+            <td class="duration">6:56.883</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
